@@ -1,0 +1,104 @@
+.nav-toggle {
+  position: fixed;
+  z-index: 10;
+  left: -12px;
+  bottom: 100px;
+  height: 150px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  display: none;
+
+  .toggle {
+    height: 55px;
+    aspect-ratio: 1;
+    background-color: #7f77aa;
+    border: 2px solid #cecece;
+    border-radius: 100px;
+    cursor: grab;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+
+    &:active {
+      cursor: grabbing;
+      scale: 0.95;
+    }
+
+    .menu {
+      position: absolute;
+      transition: 0.3s ease;
+
+      &.close {
+        opacity: 0;
+      }
+    }
+  }
+
+  &.active .toggle .close {
+    rotate: 0;
+    opacity: 1;
+  }
+
+  &.active .toggle .open {
+    rotate: 45deg;
+    opacity: 0;
+  }
+
+  .nav-icon {
+    position: absolute;
+    height: 55px;
+    aspect-ratio: 1;
+    background-color: #8d86b5;
+    border: 2px solid #cecece;
+    border-radius: 100px;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    transition: calc(var(--r) * 60ms) ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .icon {
+      color: white;
+      font-size: 20px;
+      transform: rotate(calc((120deg / 6) * var(--r)));
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background-color: #000000;
+      border-radius: 50%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      translate: 0 100%;
+      transition: 0.2s;
+    }
+
+    &.active::after {
+      translate: 0;
+    }
+  }
+
+  &.active .nav-icon {
+    opacity: 1;
+    transform: rotate(calc((-120deg / 6) * var(--r))) translateY(65px);
+    left: 15px;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav-toggle {
+    display: flex;
+  }
+}

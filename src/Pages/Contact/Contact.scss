@@ -1,0 +1,67 @@
+.contact {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-top: 50px;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  span {
+    max-width: 60%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .socials {
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .social {
+      background: linear-gradient(#56ccf2, #2f80ed);
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  footer {
+    margin-top: 100px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact {
+    padding-top: 20px;
+
+    span {
+      max-width: 100%;
+    }
+
+    .socials {
+      margin: auto 0;
+
+      .social {
+        margin: 8px;
+        padding: 10px 12px;
+        gap: 5px;
+
+        h1 {
+          font-size: 17px;
+        }
+      }
+    }
+
+    footer {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  transition: scale 0.2s;
+  
+  
+  background: linear-gradient(#56ccf2, #2f80ed);
+  
+
+  &:hover {
+    scale: 1.06;
+  }
+  a{
+    text-decoration: none;
+    letter-spacing: 0.7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  img {
+    height: 40px;
+  }
+
+  h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    font-family: raleway;
+  }
+}
+
+@media (max-width: 600px) {
+  .social {
+    width: 150px;
+    border-radius: 100px;
+
+    img {
+      height: 35px;
+    }
+    h1 {
+      font-size: 16px;
+    }
+  }
+}

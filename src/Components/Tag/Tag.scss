@@ -1,0 +1,17 @@
+.tag {
+  // width: 65px;
+  padding: 0 15px;
+  height: 35px;
+  border-radius: 8px;
+  background: linear-gradient(var(--clr-i), var(--clr-ii));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  .value {
+    font-weight: normal;
+    font-size: 17px;
+    color: white;
+  }
+}
